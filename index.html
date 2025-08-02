@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Saver</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="menu-toggle" id="openMenu" aria-controls="sidebarMenu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet">
+            <path d="m12 2.69l5.66 5.66a8 8 0 1 1-11.32 0z" />
+        </svg>
+    </button>
+
+    <main class="main-content">
+        <section class="h-screen flex items-center justify-center text-center text-white hero-section-image" style="background-image: url('/assets/4.png'); background-position: center; background-size: cover;">
+            <div class="max-w-2xl px-4 md:px-0 hero-overlay flex flex-col items-center justify-center">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-4 hero-text">
+                    Clean water is a lifeline.
+                </h1>
+                <p class="text-xl md:text-2xl mb-8">
+                    Learn about the importance of clean water and how to protect it.
+                </p>
+                <a href="#about-us" class="bg-white text-blue-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition-colors duration-300">
+                    Get Started
+                </a>
+            </div>
+        </section>
+
+        <section id="about-us" class="py-20 px-4 bg-gray-100 text-gray-800 animate-on-scroll">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">The Global Water Crisis</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                    Access to safe and clean drinking water is a fundamental human right, yet billions of people worldwide face severe water scarcity and contamination. The global water crisis is a complex issue driven by climate change, pollution, population growth, and poor infrastructure. By understanding the challenges, we can take meaningful steps to ensure a sustainable water future for everyone.
+                </p>
+            </div>
+        </section>
+    
+        <section id="our-impact" class="py-20 px-4 bg-white text-gray-800 animate-on-scroll">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center">Our Impact</h2>
+                <div class="image-gallery">
+                    <img src="/assets/1.jpg" alt="Children gathering water" class="w-full">
+                    <img src="/assets/2.jpg" alt="Family at a well" class="w-full">
+                    <img src="/assets/3.jpg" alt="Child with a water bucket" class="w-full">
+                </div>
+            </div>
+        </section>
+        
+        <section id="water-tips" class="py-20 px-4 bg-gray-100 text-gray-800 animate-on-scroll">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center">Your Guide to Water Conservation</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-on-scroll">
+                        <h3 class="text-2xl font-semibold mb-4">Fix Leaky Faucets</h3>
+                        <p class="text-gray-600">
+                            <i class="fa-solid fa-screwdriver-wrench mr-2 text-blue-500"></i>
+                            A single leaky faucet can waste thousands of gallons of water a year. Fixing it is a simple step with a huge impact.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-on-scroll">
+                        <h3 class="text-2xl font-semibold mb-4">Take Shorter Showers</h3>
+                        <p class="text-gray-600">
+                            <i class="fa-solid fa-shower mr-2 text-blue-500"></i>
+                            Reducing your shower time by just a few minutes can save a significant amount of water every day.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-on-scroll">
+                        <h3 class="text-2xl font-semibold mb-4">Run Full Loads</h3>
+                        <p class="text-gray-600">
+                            <i class="fa-solid fa-sink"></i>
+                            Whether it's your washing machine or dishwasher, always wait until you have a full load to run it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tip-fact" class="py-20 px-4 bg-white text-gray-800 animate-on-scroll">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-6 text-center">Water Tips & Facts ✨</h2>
+                <div class="flex justify-center gap-4 mb-8">
+                    <button id="generateTipBtn" class="bg-blue-500 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-600 transition-colors duration-300">
+                        Generate a Tip
+                    </button>
+                    <button id="generateFactBtn" class="bg-blue-500 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-600 transition-colors duration-300">
+                        Generate a Fact
+                    </button>
+                </div>
+                <div id="tip-fact-result" class="bg-gray-100 p-8 rounded-lg text-center text-lg italic">
+                    Click a button to get a water-saving tip or a fascinating fact!
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-20 px-4 bg-gray-100 text-gray-800 animate-on-scroll">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center">Why Water Conservation Matters</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-on-scroll">
+                        <h3 class="text-2xl font-semibold mb-4">Protect Our Ecosystems</h3>
+                        <p class="text-gray-600">
+                            Healthy ecosystems, like wetlands and rivers, rely on clean, flowing water. Conserving water helps maintain these habitats and the biodiversity they support.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-on-scroll">
+                        <h3 class="text-2xl font-semibold mb-4">Reduce Energy Consumption</h3>
+                        <p class="text-gray-600">
+                            It takes a significant amount of energy to pump, treat, and deliver water to our homes. By using less water, you're also lowering your carbon footprint.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="mb-2 text-sm">A 501(c)(3) non-profit organization</p>
+            <p class="mb-4 text-sm">EIN: 58-2060131</p>
+            <p class="mb-4">&copy; 2025 Water Private Limited. All rights reserved.</p>
+            <div class="flex justify-center gap-6 text-xl">
+                <a href="https://www.instagram.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://in.linkedin.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="menu-header">
+            <button class="close-btn" id="closeMenu">CLOSE x</button>
+        </div>
+        <div class="menu-content">
+            <ul class="menu-item-list">
+                <li class="menu-item">
+                    <a href="transition.html?target=index.html" class="menu-link">
+                        <span>HOME</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="transition.html?target=solutions.html" class="menu-link">
+                        <span>SOLUTIONS</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                 <li class="menu-item">
+                    <a href="transition.html?target=about.html" class="menu-link">
+                        <span>ABOUT US</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                 <li class="menu-item">
+                    <a href="transition.html?target=impact.html" class="menu-link">
+                        <span>OUR IMPACT</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#tip-fact" class="menu-link">
+                        <span>TIP FOR WATER</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="transition.html?target=glimpses.html" class="menu-link">
+                        <span>GLIMPSES</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cardImages = document.querySelectorAll('.animated-card-image');
+            cardImages.forEach(card => {
+                const video = card.querySelector('video');
+                if (video) {
+                    card.addEventListener('mouseenter', () => {
+                        video.play();
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        video.pause();
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

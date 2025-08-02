@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitioning...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1222;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: #e2e8f0;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .droplet-wrapper {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .droplet-ring {
+            position: absolute;
+            border: 4px solid #4fc3f7;
+            border-radius: 50%;
+            animation: expand-droplet 2s ease-out forwards infinite;
+            opacity: 0;
+            box-shadow: 0 0 10px #4fc3f7, inset 0 0 10px #4fc3f7;
+        }
+
+        .droplet-ring:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .droplet-ring:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .droplet-ring:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .transition-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse-text 2s infinite ease-in-out;
+            z-index: 10;
+        }
+
+        @keyframes expand-droplet {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+                border-width: 8px;
+            }
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+                border-width: 2px;
+            }
+        }
+
+        @keyframes pulse-text {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="droplet-wrapper">
+        <div class="droplet-ring"></div>
+        <div class="droplet-ring"></div>
+        <div class="droplet-ring"></div>
+    </div>
+    <div class="transition-text">LOADING...</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const targetPage = params.get('target');
+
+            if (targetPage) {
+                setTimeout(() => {
+                    window.location.href = targetPage;
+                }, 1500); 
+            }
+        });
+    </script>
+</body>
+</html>

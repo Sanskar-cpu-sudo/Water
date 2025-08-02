@@ -1,0 +1,323 @@
+        /* General body and layout styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+
+        /* Sidebar Menu Styles */
+        .sidebar-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+            background-color: #e6f1ff;
+            color: #0f172a;
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in-out;
+            z-index: 1000;
+            overflow-y: auto;
+            box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-menu.open {
+            transform: translateX(0);
+        }
+
+        .menu-header {
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: 1px solid #0f172a;
+            color: #0f172a;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 9999px;
+        }
+
+        .close-btn:hover {
+            background-color: #0f172a;
+            color: white;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1e3a8a;
+            border: 2px solid #3b82f6;
+            color: white;
+            width: 50px;
+            height: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.4s ease-in-out, background-color 0.3s ease;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
+            -webkit-user-drag: none;
+        }
+        
+        .menu-toggle:not(.pushed-left):hover {
+            transform: scale(1.1) rotate(360deg);
+            background-color: #162a63;
+        }
+
+        .menu-toggle.pushed-left {
+            transform: translateX(-410px);
+        }
+
+        .menu-toggle.pushed-left:hover {
+            transform: translateX(-410px) scale(1.1) rotate(360deg);
+            background-color: #162a83;
+        }
+            
+        .menu-content {
+            padding: 0 20px;
+        }
+
+        .menu-item-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            padding: 10px;
+        }
+
+        .menu-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: #0f172a;
+            font-size: 1.5em;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 10px;
+            border: 1px solid #a7b7cc;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease-out;
+        }
+
+        .menu-link:hover {
+            background-color: #d1e2f5;
+            color: #0077b6;
+            transform: translateX(10px);
+        }
+
+        .menu-arrow {
+            font-size: 1em;
+            font-weight: 900;
+            color: #0f172a;
+            transition: color 0.3s ease;
+        }
+
+        .menu-link:hover .menu-arrow {
+            color: #0077b6;
+        }
+
+        /* Hero Section */
+        .hero-section-image {
+            background-image: url('/assets/4.png');
+            background-position: center;
+            background-size: cover; /* This is key for responsiveness, ensuring the image always covers the area */
+            background-attachment: scroll; /* Changed from fixed to scroll for better mobile compatibility */
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 1rem;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        
+        .hero-content {
+            z-index: 20;
+            position: relative;
+        }
+        
+        /* Responsive font size for the hero heading */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem; /* Smaller font size for mobile */
+            }
+        }
+        
+        /* Animated Solutions Cards */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-animation-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .image-animation-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 2s ease-in-out;
+        }
+
+        /* The secondary image is hidden by default for normal cards */
+        .solution-card .secondary-media {
+            opacity: 0;
+        }
+        
+        /* On hover for normal cards, hide the primary and show the secondary */
+        .solution-card:hover .primary-image {
+            opacity: 0;
+        }
+        
+        .solution-card:hover .secondary-media {
+            opacity: 1;
+        }
+        
+        /* New CSS for the reverse animation */
+        /* For reverse animation cards, the secondary image is visible by default */
+        .solution-card.reverse-animation .primary-image {
+            opacity: 0;
+        }
+        
+        .solution-card.reverse-animation .secondary-media {
+            opacity: 1;
+        }
+
+        /* On hover for reverse animation cards, hide the secondary and show the primary */
+        .solution-card.reverse-animation:hover .primary-image {
+            opacity: 1;
+        }
+        
+        .solution-card.reverse-animation:hover .secondary-media {
+            opacity: 0;
+        }
+
+        /* Pattern Overlay Styles */
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+                45deg,
+                rgba(0, 119, 182, 0.1) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(0, 119, 182, 0.1) 50%,
+                rgba(0, 119, 182, 0.1) 75%,
+                transparent 75%,
+                transparent
+            );
+            background-size: 20px 20px;
+            background-position: 0 0;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, background-position 2s ease-in-out;
+            z-index: 5;
+        }
+        
+        /* Animate the overlay on hover */
+        .solution-card:hover .pattern-overlay {
+            opacity: 1;
+            background-position: 200px 0;
+        }
+        
+        .solution-card-text {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out var(--animation-delay, 0s), transform 0.6s ease-out var(--animation-delay, 0s);
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Spinner for API loading state */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #0077b6;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }

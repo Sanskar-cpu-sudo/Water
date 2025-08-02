@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Impact | Water Saver</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-ieoU56FpU8Fp6fLhQz1Q2V6R1Hq9mE6H5+a7+F9gO8z6+8l7gO3FpG9zPq6+w8q3e1k7Zz6eH1+g5yL5q5x0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="impact.css">
+</head>
+<body>
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle" id="openMenu" aria-controls="sidebarMenu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet">
+            <path d="m12 2.69l5.66 5.66a8 8 0 1 1-11.32 0z" />
+        </svg>
+    </button>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <header class="hero-section-image">
+            <div class="hero-overlay"></div>
+            <div class="hero-content max-w-2xl px-4 md:px-0">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-4">
+                    Our Impact
+                </h1>
+                <p class="text-xl md:text-2xl mb-8">
+                    See the difference we are making in communities around the world.
+                </p>
+            </div>
+        </header>
+
+        <!-- Our Impact Marquee Section -->
+        <section id="our-impact-marquee" class="py-20 animate-on-scroll">
+            <div class="max-w-6xl mx-auto px-4 mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">A Global Reach</h2>
+                <p class="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-gray-700 text-center">
+                    Through our network of partners and volunteers, we have helped millions gain access to clean water and sanitation. This is just a glimpse of the communities we've touched.
+                </p>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee">
+                    <div class="marquee-images">
+                        <img src="/assets/i1.png" alt="Impact Image 1">
+                        <img src="/assets/i2.png" alt="Impact Image 2">
+                        <img src="/assets/i3.png" alt="Impact Image 3">
+                        <img src="/assets/i4.png" alt="Impact Image 4">
+                        <img src="/assets/i5.png" alt="Impact Image 5">
+                        <img src="/assets/i6.png" alt="Impact Image 6">
+                    </div>
+                    <!-- Duplicate the images for a seamless loop -->
+                    <div class="marquee-images">
+                        <img src="/assets/i1.png" alt="Impact Image 1">
+                        <img src="/assets/i2.png" alt="Impact Image 2">
+                        <img src="/assets/i3.png" alt="Impact Image 3">
+                        <img src="/assets/i4.png" alt="Impact Image 4">
+                        <img src="/assets/i5.png" alt="Impact Image 5">
+                        <img src="/assets/i6.png" alt="Impact Image 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="mb-2 text-sm">A 501(c)(3) non-profit organization</p>
+            <p class="mb-4 text-sm">EIN: 58-2060131</p>
+            <p class="mb-4">&copy; 2025 Water Private Limited. All rights reserved.</p>
+            <div class="flex justify-center gap-6 text-xl">
+                <a href="https://www.instagram.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://in.linkedin.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Sidebar Menu -->
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="menu-header">
+            <button class="close-btn" id="closeMenu">CLOSE x</button>
+        </div>
+        <div class="menu-content">
+            <ul class="menu-item-list">
+                <li class="menu-item">
+                    <a href="transition.html?target=index.html" class="menu-link">
+                        <span>HOME</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="transition.html?target=solutions.html" class="menu-link">
+                        <span>SOLUTIONS</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="transition.html?target=about.html" class="menu-link">
+                        <span>ABOUT US</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="transition.html?target=impact.html" class="menu-link">
+                        <span>OUR IMPACT</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="index.html#tip-fact" class="menu-link">
+                        <span>TIP FOR WATER</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="transition.html?target=glimpses.html" class="menu-link">
+                        <span>GLIMPSES</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="impact.js">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+        /* General body and layout styles */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+
+        /* Hero Section */
+        .hero-section-image {
+            background-image: url('/assets/4.png');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 1rem;
+        }
+        
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+
+        .hero-content {
+            z-index: 20;
+            position: relative;
+        }
+
+        /* Sidebar Menu Styles from previous files */
+        .sidebar-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+            background-color: #e6f1ff;
+            color: #0f172a;
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in-out;
+            z-index: 1000;
+            overflow-y: auto;
+            box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-menu.open {
+            transform: translateX(0);
+        }
+
+        .menu-header {
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: 1px solid #0f172a;
+            color: #0f172a;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 9999px;
+        }
+
+        .close-btn:hover {
+            background-color: #0f172a;
+            color: white;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1e3a8a;
+            border: 2px solid #3b82f6;
+            color: white;
+            width: 50px;
+            height: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.4s ease-in-out, background-color 0.3s ease;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
+            -webkit-user-drag: none;
+        }
+
+        .menu-toggle.pushed-left {
+            transform: translateX(-410px);
+        }
+
+        .menu-toggle:not(.pushed-left):hover {
+            transform: scale(1.1) rotate(360deg);
+            background-color: #162a63;
+        }
+
+        .menu-toggle.pushed-left:hover {
+            transform: translateX(-410px) scale(1.1) rotate(360deg);
+            background-color: #162a83;
+        }
+            
+        .menu-content {
+            padding: 0 20px;
+        }
+
+        .menu-item-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            padding: 10px;
+        }
+
+        .menu-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: #0f172a;
+            font-size: 1.5em;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 10px;
+            border: 1px solid #a7b7cc;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease-out;
+        }
+
+        .menu-link:hover {
+            background-color: #d1e2f5;
+            color: #0077b6;
+            transform: translateX(10px);
+        }
+
+        .menu-arrow {
+            font-size: 1em;
+            font-weight: 900;
+            color: #0f172a;
+            transition: color 0.3s ease;
+        }
+
+        .menu-link:hover .menu-arrow {
+            color: #0077b6;
+        }
+
+        /* About Page specific styles */
+        .about-section {
+            background-color: #ffffff;
+            color: #1f2937;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        /* New Team Section Styles */
+        .vertical-team-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .team-card {
+            background-color: #f1f5f9;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .team-card {
+                justify-content: flex-start;
+            }
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .team-info h3 {
+            display: block; 
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+
+        .team-info p {
+            display: block; 
+            font-size: 1rem;
+            font-weight: 400;
+            color: #4b5563;
+        }
+
+        /* The image size has been increased here */
+        .team-card-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            z-index: 20;
+        }
+        
+        .team-card:hover .team-card-image {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }

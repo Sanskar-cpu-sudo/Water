@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Water Saver</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-ieoU56FpU8Fp6fLhQz1Q2V6R1Hq9mE6H5+a7+F9gO8z6+8l7gO3FpG9zPq6+w8q3e1k7Zz6eH1+g5yL5q5x0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle" id="openMenu" aria-controls="sidebarMenu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet">
+            <path d="m12 2.69l5.66 5.66a8 8 0 1 1-11.32 0z" />
+        </svg>
+    </button>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <header class="hero-section-image">
+            <div class="hero-overlay"></div>
+            <div class="hero-content max-w-2xl px-4 md:px-0">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-4">
+                    About Us
+                </h1>
+                <p class="text-xl md:text-2xl mb-8">
+                    Our mission, our team, and our commitment to a sustainable water future.
+                </p>
+            </div>
+        </header>
+
+        <!-- Our Story Section -->
+        <section id="our-story" class="about-section bg-gray-100 animate-on-scroll">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Our Story</h2>
+                <p class="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-gray-700">
+                    Founded in 2020, Water Saver started with a simple idea: that every person deserves access to clean, safe water. We are a passionate team of environmentalists, engineers, and community organizers dedicated to tackling the global water crisis head-on. Through education, innovation, and direct action, we are working to build a world where water is a right, not a luxury.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section id="our-team" class="about-section animate-on-scroll">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12">Meet Our Team</h2>
+                <div class="vertical-team-list px-4">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <img src="/assets/11.png" alt="Jane Doe" class="team-card-image">
+                        <div class="team-info">
+                            <h3>Sanjay Dutt</h3>
+                            <p>Founder & CEO</p>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <img src="/assets/22.png" alt="John Smith" class="team-card-image">
+                        <div class="team-info">
+                            <h3>Steve Smith</h3>
+                            <p>Chief Technology Officer</p>
+                        </div>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <img src="/assets/33.png" alt="Emily White" class="team-card-image">
+                        <div class="team-info">
+                            <h3>John Pichai</h3>
+                            <p>Director of Outreach</p>
+                        </div>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div class="team-card">
+                        <img src="/assets/44.png" alt="Michael Green" class="team-card-image">
+                        <div class="team-info">
+                            <h3>Michael Jordan</h3>
+                            <p>Lead Engineer</p>
+                        </div>
+                    </div>
+                    <!-- Team Member 5 -->
+                    <div class="team-card">
+                        <img src="/assets/55.png" alt="Sarah Blue" class="team-card-image">
+                        <div class="team-info">
+                            <h3>Sara Khan</h3>
+                            <p>Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="mb-2 text-sm">A 501(c)(3) non-profit organization</p>
+            <p class="mb-4 text-sm">EIN: 58-2060131</p>
+            <p class="mb-4">&copy; 2025 Water Private Limited. All rights reserved.</p>
+            <div class="flex justify-center gap-6 text-xl">
+                <a href="https://www.instagram.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://in.linkedin.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Sidebar Menu -->
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="menu-header">
+            <button class="close-btn" id="closeMenu">CLOSE x</button>
+        </div>
+        <div class="menu-content">
+            <ul class="menu-item-list">
+                <li class="menu-item">
+                    <a href="transition.html?target=index.html" class="menu-link">
+                        <span>HOME</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="transition.html?target=solutions.html" class="menu-link">
+                        <span>SOLUTIONS</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                 <li class="menu-item">
+                    <a href="transition.html?target=about.html" class="menu-link">
+                        <span>ABOUT US</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                 <li class="menu-item">
+                    <a href="transition.html?target=impact.html" class="menu-link">
+                        <span>OUR IMPACT</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="index.html#water-tips" class="menu-link">
+                        <span>TIP FOR WATER</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="transition.html?target=glimpses.html" class="menu-link">
+                        <span>GLIMPSES</span>
+                        <span class="menu-arrow">&#8594;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="about.js">
+    </script>
+</body>
+</html>
