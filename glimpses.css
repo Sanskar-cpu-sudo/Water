@@ -21,7 +21,7 @@
         /* Hero Section */
         .hero-section-image {
             /* Restored original image path */
-            background-image: url('/assets/gl.png'); 
+            background-image: url('/assets/4.png'); 
             background-position: center;
             background-size: cover; /* Retaining the responsive property */
             background-attachment: scroll; /* Retaining the responsive property */
